@@ -1,2 +1,2 @@
 # testNestEngine
-- 테스트로 만들어볼 nest 엔진
+- 다양하게 만들어 볼만한 NODE 서버코드 설정하기

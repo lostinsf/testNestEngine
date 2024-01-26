@@ -1,0 +1,18 @@
+#FOLDER
+build/
+node_modules/
+public/
+dist/
+.next/
+.husky/
+
+#FILE (HIDDEN)
+.*
+
+#FILE
+next-env.d.ts
+next.config.js
+nest.config.js
+*.log*
+*-lock*
+*.lock

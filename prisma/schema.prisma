@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DB_URL")
+}
+
+model logger {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  time_created  DateTime  @default(now()) @db.Timestamp
+  time_updated  DateTime? @updatedAt @db.Timestamp
+  time_removed  DateTime? @db.Timestamp
+  logger_id     String    @unique @db.String
+  logger_group  String    @db.String
+  logger_key    String    @db.String
+  logger_value  String    @db.String
+  logger_device String?   @db.String
+  logger_ip     String?   @db.String
+  logger_user   String?   @db.String
+}
+
+model nation {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  time_created DateTime  @default(now()) @db.Timestamp
+  time_updated DateTime? @updatedAt @db.Timestamp
+  time_removed DateTime? @db.Timestamp
+  nation_id    String    @unique @db.String
+  nation_group String    @db.String
+  nation_key   String    @db.String
+  nation_value String    @db.String
+}
+
+model user {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  time_created  DateTime  @default(now()) @db.Timestamp
+  time_updated  DateTime? @updatedAt @db.Timestamp
+  time_removed  DateTime? @db.Timestamp
+  user_id       String    @unique @db.String
+  user_group    String    @db.String
+  user_key      String    @db.String
+  user_value    String    @db.String
+  user_email    String?   @db.String
+  user_phone    String?   @db.String
+  user_name     String?   @db.String
+  user_password String?   @db.String
+  user_device   String?   @db.String
+}
+
+model token {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  time_created DateTime  @default(now()) @db.Timestamp
+  time_updated DateTime? @updatedAt @db.Timestamp
+  time_removed DateTime? @db.Timestamp
+  token_id     String    @unique @db.String
+  token_group  String    @db.String
+  token_key    String    @db.String
+  token_value  String    @db.String
+  token_user   String?   @db.String
+  token_device String?   @db.String
+}
+
+model game {
+  id           String    @id @default(auto()) @map("_id") @db.ObjectId
+  time_created DateTime  @default(now()) @db.Timestamp
+  time_updated DateTime? @updatedAt @db.Timestamp
+  time_removed DateTime? @db.Timestamp
+  game_id      String    @unique @db.String
+  game_group   String    @db.String
+  game_key     String    @db.String
+  game_value   String    @db.String
+  game_answer  String    @db.String
+  game_user    String?   @db.String
+}

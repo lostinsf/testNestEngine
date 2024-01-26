@@ -1,0 +1,7 @@
+#FOLDER
+build/
+node_modules/
+dist/
+.next/
+.husky/
+.env*
