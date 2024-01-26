@@ -1,0 +1,16 @@
+# http://editorconfig.org
+root = true
+
+[*]
+indent_style = space #스페이스
+indent_size = 2 # 2칸
+end_of_line = lf # Line Feed (\n) 
+charset = utf-8 # 케릭터 셋
+trim_trailing_whitespace = true #줄 바꿈 문자 앞에 있는 공백 문자 제거함
+insert_final_newline = true # 마지막 자동 줄바꿈 기능 켬
+
+[*.md]
+trim_trailing_whitespace = false #줄 바꿈 문자 앞에 있는 공백 문자 제거안함
+
+[Makefile]
+indent_style = tab #탭
